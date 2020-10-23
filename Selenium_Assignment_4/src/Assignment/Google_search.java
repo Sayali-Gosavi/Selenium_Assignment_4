@@ -38,8 +38,11 @@ public class Google_search {
 		//storing all suggestion in list
 		List<WebElement> WE= d.findElements(By.xpath("//ul[@class='erkvQe']//li"));
 		
+		System.out.println(WE.size());
+		Thread.sleep(5000);
 		//iterate through all suggestions and select required text
 		for(int i=0;i<WE.size();i++) {
+			Thread.sleep(5000);
 			String val = WE.get(i).getText();
 			if(val.equals("selenium webdriver")) {
 				WE.get(i).click();
